@@ -2,13 +2,18 @@ import { useRouter } from "next/navigation";
 
 interface BackButtonProps {
   className?: string;
+  onClick?: () => void;
 }
 
 export default function BackButton(props: BackButtonProps) {
   const router = useRouter();
 
   const handleBack = () => {
-    router.push("/");
+    if (props.onClick) {
+      props.onClick();
+    } else {
+      router.push("/");
+    }
   };
 
   return (
