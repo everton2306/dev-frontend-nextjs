@@ -30,7 +30,7 @@ export default function Home() {
           Produtos
         </h1>
         <Link
-          href="/products/new"
+          href="/products/create"
           className="block md:inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 mb-6 mx-auto md:mx-0 text-center"
         >
           Novo Produto
