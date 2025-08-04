@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { getProduct } from "../../../services/api";
 import { useRouter } from "next/router";
 import { Product } from "@/types/product";
-import EditProduct from "@/components/EditProduct";
+import DeleteProduct from "@/components/DeleteProduct";
 
-export default function ProductEditPage() {
+export default function ProductDeletePage() {
   const router = useRouter();
   const { id } = router.query;
   const [product, setProduct] = useState<Product | null>(null);
@@ -17,5 +17,5 @@ export default function ProductEditPage() {
 
   if (!product) return <p>Carregando...</p>;
 
-  return <EditProduct product={product} />;
+  return <DeleteProduct product={product} />;
 }
