@@ -45,7 +45,7 @@ export default function CreateProduct() {
 
   return (
     <div className="bg-gradient-to-br from-purple-50 pt-4 pb-4">
-      <BackButton />
+      <BackButton className="ml-4" />
       <div className="min-h-screen via-indigo-50 to-pink-50 flex justify-center items-center p-6 font-sans">
         <div className="max-w-3xl w-full bg-white rounded-3xl shadow-xl p-8 md:p-12 transition-transform hover:scale-105 duration-300">
           <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">
