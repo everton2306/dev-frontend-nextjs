@@ -12,8 +12,9 @@ export default function DeleteProduct(props: DeleteProductProps) {
   const router = useRouter();
 
   const handleDelete = async () => {
-    await deleteProduct(props.product.id!).then(() => {
-        toast.success("Produto removido com sucesso!");        
+    await deleteProduct(props.product.id!)
+      .then(() => {
+        toast.success("Produto removido com sucesso!");
         router.push("/");
       })
       .catch(() => {
@@ -30,8 +31,8 @@ export default function DeleteProduct(props: DeleteProductProps) {
         </h2>
         {/* Mensagem */}
         <p className="mb-6 text-gray-700 text-lg">
-          Você realmente deseja excluir o produto "
-          <span className="font-semibold">{props.product.title}</span>"?
+          Você realmente deseja excluir o produto {"\""}
+          <span className="font-semibold">{props.product.title}</span>{"\""}?
         </p>
 
         {/* Botões */}

@@ -1,89 +1,58 @@
-# 🧪 Desafio Técnico – Front-End (Next.js)
+# FakeStore CRUD
 
-## 🎯 Objetivo
+Aplicação em Next.js para gerenciamento de produtos com integração à Fake Store API.
 
-Criar uma aplicação web com **Next.js** e **TypeScript** que implemente um **CRUD de produtos**, utilizando a [FakeStore API](https://fakestoreapi.com/).
+## 💻 Tecnologias
 
----
-
-## 📦 API a ser utilizada
-
-Use os seguintes endpoints da FakeStore API:
-
-- `GET /products` – listar produtos  
-- `GET /products/:id` – visualizar detalhes  
-- `POST /products` – criar novo produto  
-- `PUT /products/:id` – editar produto  
-- `DELETE /products/:id` – deletar produto  
-
-> ⚠️ A API é pública e os dados não são persistidos de verdade.
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Sonner](https://sonner.emilkowal.dev/) – para toasts
+- [React Testing Library](https://testing-library.com/) – para testes
 
 ---
 
-## ✅ Funcionalidades
+## 🚀 Rodando o Projeto Localmente
 
-### Obrigatórias
-- **Listagem** de produtos
-- **Visualização** de um produto
-- **Criação** de novo produto
-- **Edição** de produto existente
-- **Exclusão** de produto
+### 1. Clone o repositório
 
-### Não obrigatórias
-- Tela de **login fake** com e-mail e senha fixos
-- **Menu lateral (sidebar)** responsivo
-- Layout **totalmente responsivo** (mobile e desktop)
+```bash
+git clone https://github.com/seu-usuario/seu-repo.git
+cd seu-repo
 
----
+### 2. Instale as dependências
+npm install
 
-## 🔧 Requisitos técnicos obrigatórios
 
-- [x] Next.js com TypeScript
-- [x] React Hooks
-- [x] Integração com a FakeStore API
-- [x] Tailwind CSS para estilização
-- [x] Código bem organizado e componentizado
-- [x] Git com histórico de commits claros
-- [x] README com instruções de como rodar
+### 3. Rode o projeto
+npm run dev
 
----
+Abra no navegador: http://localhost:3000
 
-## 🌟 Diferenciais (pontos positivos)
+### Login Fake
+E-mail: admin@admin.com
+Senha: 123456
 
-- Uso do **shadcn-ui**
-- Deploy funcional na **Vercel**
-- Feedbacks de carregamento, sucesso e erro
-- Testes com **Jest** ou **React Testing Library**
+### Rodando os testes
+npm run test
 
----
+## **Deploy na Vercel (gratuito)**
 
-## 📥 Como iniciar
+### Passos:
 
-1. Faça um **fork** deste repositório.
-2. Trabalhe no seu fork normalmente, fazendo commits e push a cada evolução.
-3. Mantenha o repositório **público** para avaliação.
+1. Crie um repositório no GitHub (caso ainda não tenha).
+2. Suba seu projeto com:
 
----
+git init
+git remote add origin https://github.com/seu-usuario/seu-repo.git
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+Acesse https://vercel.com/import.
 
-## 📤 Entrega
+Clique em "Import Git Repository", selecione seu repositório.
 
-1. Envie o **link do seu fork** para a equipe de recrutamento.
-2. Certifique-se de que o `README.md` inclui:
-   - ✅ Como rodar o projeto localmente
-   - ✅ Link para o deploy (caso tenha publicado)
+Use as configurações padrão e clique em "Deploy".
 
----
-
-## 💡 Avaliação
-
-Serão avaliados os seguintes pontos:
-
-- Qualidade da interface (UX/UI)
-- Qualidade do código e clareza
-- Organização das pastas e boas práticas
-- Responsividade e experiência do usuário
-- Uso correto de Git (commits, mensagens e histórico)
-
----
-
-Boa sorte e bom código! 🚀
+🔗 Quando terminar, você terá uma URL pública como:
+https://fakecrud.vercel.app

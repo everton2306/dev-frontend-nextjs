@@ -11,5 +11,5 @@ export default function useAuth() {
     if (!auth) {
       router.push("/login");
     }
-  }, []);
+  }, [router]);
 }

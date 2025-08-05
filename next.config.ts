@@ -5,4 +5,17 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
 };
 
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "fakestoreapi.com",
+        // opcional: paths específicos
+        // pathname: '/img/**',
+      },
+    ],
+  },
+};
+
 export default nextConfig;

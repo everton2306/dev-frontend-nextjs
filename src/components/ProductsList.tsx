@@ -1,5 +1,6 @@
 import { Product } from "@/types/product";
 import Link from "next/link";
+import Image from "next/image";
 
 type ProductProps = {
   products: Product[];
@@ -26,11 +27,13 @@ export default function ProductsList({ products }: ProductProps) {
             key={product.id}
             className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-4 flex flex-col"
           >
-            {/* Imagem */}
-            <img
+            {/* Imagem */}            
+            <Image
               src={product.image}
               alt={product.title}
-              className="h-40 object-contain mb-4 mx-auto"
+              width={500} // ou sua preferência
+              height={300} // ajuste conforme necessário
+              className="w-full h-full max-h-96 object-contain rounded-lg shadow-md"
             />
             {/* Detalhes */}
             <h2 className="text-xl font-semibold text-gray-800 line-clamp-2">

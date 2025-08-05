@@ -1,6 +1,7 @@
 import { Product } from "@/types/product";
 import { useRouter } from "next/navigation";
 import BackButton from "./BackButton";
+import Image from "next/image";
 
 type ProductProps = {
   product: Product;
@@ -18,10 +19,12 @@ export default function ProductDetails({ product }: ProductProps) {
         {/* Conteúdo principal */}
         <div className="flex flex-col md:flex-row gap-8 items-center">
           {/* Imagem */}
-          <div className="flex-1">
-            <img
+          <div className="flex-1">            
+            <Image
               src={product.image}
               alt={product.title}
+              width={500}
+              height={300} 
               className="w-full h-full max-h-96 object-contain rounded-lg shadow-md"
             />
           </div>
@@ -57,7 +60,7 @@ export default function ProductDetails({ product }: ProductProps) {
           </button>
           <button
             onClick={() => router.push(`/products/delete/${product.id}`)}
-            className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg shadow-md transition duration-200"            
+            className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg shadow-md transition duration-200"
           >
             Excluir
           </button>

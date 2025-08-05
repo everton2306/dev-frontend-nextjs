@@ -16,7 +16,7 @@ export default function ProductDeletePage() {
     getProduct(Number(id)).then((data) => {
       setProduct(data);
     });
-  }, []);
+  }, [id]);
 
   if (!product) return <p>Carregando...</p>;
 
