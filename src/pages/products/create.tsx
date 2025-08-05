@@ -1,17 +1,18 @@
+"use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Product } from "../../types/product";
 import { createProduct } from "../../services/api";
 import BackButton from "@/components/BackButton";
+import useAuth from "@/hooks/useAuth";
 
 // Função para formatar moeda BRL
 const formatCurrency = (value: number) =>
   value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
 export default function CreateProduct() {
+  useAuth();
   const router = useRouter();
-  const [price, setPrice] = useState<number | null>(null);
-  const [priceDisplay, setPriceDisplay] = useState<string>("");
 
   const [form, setForm] = useState<Product>({
     title: "",
