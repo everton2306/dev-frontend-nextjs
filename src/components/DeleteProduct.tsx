@@ -1,6 +1,7 @@
 import { deleteProduct } from "@/services/api";
 import { Product } from "@/types/product";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 type DeleteProductProps = {
   product: Product;
@@ -11,8 +12,13 @@ export default function DeleteProduct(props: DeleteProductProps) {
   const router = useRouter();
 
   const handleDelete = async () => {
-    await deleteProduct(props.product.id!);
-    router.push("/");
+    await deleteProduct(props.product.id!).then(() => {
+        toast.success("Produto removido com sucesso!");        
+        router.push("/");
+      })
+      .catch(() => {
+        toast.error("Não foi possível remover o produto.");
+      });
   };
 
   return (

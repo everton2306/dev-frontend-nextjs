@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { Product } from "@/types/product";
 import BackButton from "./BackButton";
 import { updateProduct } from "@/services/api";
+import { toast } from "sonner";
 
 type ProductProps = {
   product: Product;
@@ -27,8 +28,14 @@ export default function EditProduct({ product }: ProductProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    await updateProduct(form.id!, form);
-    router.push(`/products/${form.id}`);
+    await updateProduct(form.id!, form)
+      .then(() => {
+        toast.success("Produto editado com sucesso!");
+        router.push(`/products/${form.id}`);
+      })
+      .catch(() => {
+        toast.error("Não foi possível editar o produto.");
+      });
   };
 
   return (

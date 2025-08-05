@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -14,7 +15,7 @@ export default function LoginPage() {
       localStorage.setItem("auth", "true");
       router.push("/");
     } else {
-      alert("Credenciais inválidas");
+      toast.error("Credenciais inválidas");      
     }
   };
 
